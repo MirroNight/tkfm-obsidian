@@ -113,8 +113,7 @@ Inside `tkfm` directory, you will see:
 > [!NOTE]
 > Symlink your output directory can keep update easy.
 > On linux: `cd <dest_dir>` then `ln -s <path-of-tkfm-obsidian/tkfm>`
-
-> [!NOTE]
+> 
 > Inside file explorere in obsidian, I recommand you change the sort order to `sort by creation time (old to new)`, since the characters is named by their names. This script creates each character's note in the order of their release date/ID.
 
 ## Ownership data
