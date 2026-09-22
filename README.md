@@ -71,8 +71,8 @@ Inside `tkfm` directory, you will see:
 	```
 
 4. Run `main.py` with your prefered way of runing python.  
-	To change the language, output location, please check the [[#Options]] section.  
-	To save/load and update ownership data, please check the [[#Ownership data]] section.
+	To change the language, output location, please check the `###Options` section.  
+	To save/load and update ownership data, please check the `##Ownership data` section.
 
 	```sh
 	# raw python
@@ -99,7 +99,7 @@ Inside `tkfm` directory, you will see:
 | `-l`                | `LANG`   | Language (not translated values will default to EN). `LANG` is one of `{TC,SC,EN,JP,KR}`.                                         | `TC`          |
 | `-o`                | `OUTDIR` | Output directory.                                                                                                                 | `tkfm`        |
 | `-p`                | `DIR`    | Project directory, for keeping `tenkaassist` and `TKFM-Data-Room` data.                                                           | `projects`    |
-| `-j`                | `JSON`   | **Optional** json file containing ownership information. See [ownership](#Ownership\ data) section for more informaiton.          |               |
+| `-j`                | `JSON`   | **Optional** json file containing ownership information. See `###Ownership data` section for more informaiton.                    |               |
 | `-L`                | `FILE`   | Path to log (text) file. Will create if needed.                                                                                   | `process.log` |
 | `-v`                | `LEVEL`  | Log verbosity level. `LEVEL` is one of `{NOTSET,DEBUG,INFO,WARNING,ERROR,CRITICAL}`                                               | `INFO`        |
 | `--use-pic-id`      |          | Use id to name icon files (i.e. `cs10001_0_0.webp`) instead of name (i.e. `Archdemon Ba'al.webp`).                                |               |
