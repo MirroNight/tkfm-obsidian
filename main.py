@@ -169,8 +169,14 @@ def main(
     characters_dir = output_dir / "characters"
     if not characters_dir.exists():
         logger.debug(f"'{characters_dir}' not found")
-        output_dir.mkdir(parents=True, exist_ok=True)
+        characters_dir.mkdir(parents=True, exist_ok=True)
         logger.info(f"'{characters_dir}' created")
+
+    icons_dir = output_dir / "icons"
+    if not characters_dir.exists():
+        logger.debug(f"'{icons_dir}' not found")
+        icons_dir.mkdir(parents=True, exist_ok=True)
+        logger.info(f"'{icons_dir}' created")
 
     for rarity in Rarity:
         rarity_dir = characters_dir / rarity.name
@@ -220,7 +226,7 @@ def main(
     if not skip_copy_icons:
         copy_icons(
             tenkaassist.path,
-            output_dir,
+            icons_dir,
             lang,
             character_map,
             use_pic_id,
@@ -246,7 +252,7 @@ def main(
     # create "How to use"
     how_to_use_file = output_dir / "How to use.md"
     if not how_to_use_file.exists() or force_update:
-        Path("How to use.md").copy(how_to_use_file)
+        Path("data/How to use.md").copy(how_to_use_file)
 
     # create "Character search base"
     base_example_file = output_dir / "Character search.base"

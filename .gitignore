@@ -10,11 +10,11 @@ wheels/
 .venv/
 
 # generated dirs
-archive/
 projects/
 tkfm/
-units/
 process.log
+
+# other files to exclude
 note.md
 test.py
 

@@ -57,7 +57,7 @@ def build_character_map(
 
 def copy_icons(
     path_tenkaassist: Path,
-    output_dir: Path,
+    dst_dir: Path,
     lang: Language,
     char_map: dict[str, CharacterInfo],
     use_pic_id: bool = False,
@@ -65,7 +65,6 @@ def copy_icons(
     forec_update: bool = False,
 ) -> None:
     src_dir: Path = path_tenkaassist / "images" / "characters"
-    dst_dir: Path = output_dir / "icons"
 
     logger.debug("Building icon table")
     get_name = lambda c: c.id if use_pic_id else c.full_name(lang)

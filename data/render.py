@@ -25,7 +25,7 @@ def get_tag_list(lang: Language) -> str:
         "auto damage up": [],
         "skill damage up": [],
         "received damage up": [],
-        "corwd control": [],
+        "crowd control": [],
         "remove": [],
         "other": [],
     }
