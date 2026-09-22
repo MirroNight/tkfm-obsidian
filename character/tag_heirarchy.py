@@ -49,6 +49,13 @@ cc = [
 
 
 def get_tag_type(tag: Tag) -> str:
+    if tag in general_buffs:
+        return "general buffs"
+    if tag in general_debuffs:
+        return "general debuffs"
+    if tag in cc:
+        return "crowd control"
+
     t = tag.name
     if re_match(rm, t):
         return "remove"
@@ -64,10 +71,4 @@ def get_tag_type(tag: Tag) -> str:
         return "auto damage up"
     if re_match(dmg_up, t):
         return "damage up"
-    if t in general_buffs:
-        return "general buffs"
-    if t in general_debuffs:
-        return "general debuffs"
-    if t in cc:
-        return "crowd control"
     return "other"
