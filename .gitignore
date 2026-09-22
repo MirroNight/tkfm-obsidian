@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# generated dirs
+archive/
+projects/
+tkfm/
+units/
+process.log
+note.md
+test.py
+
+# symlinks
+tkfm
+unit
