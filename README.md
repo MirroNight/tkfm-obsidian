@@ -19,7 +19,8 @@ usage: main.py [-h] [-l {TC,SC,EN,JP,KR}]
                [--skip-copy-icons] [--force-update]
 
 Generates obsidian vault for tkfm characters,make team building and character search easier.
-Creates wiki-like character notes, with auto-generatedtags, and easy to mark owned characters and skill level.
+Creates wiki-like character notes, with auto-generatedtags, and easy to mark owned
+characters and skill level.
 
 options:
   -h, --help            show this help message and exit
@@ -87,7 +88,7 @@ Inside `tkfm` directory, you will see:
 
 > The log can be found at `process.log`.
 
-> [!NOTE] What is a BASE?
+> [!NOTE]
 > **BASE** is a type of database/spreadsheet representation of your notes' properties. It supports filtering and modifying of properties. Which is the function we're taking advantage of in this project.
 
 ### Options
@@ -109,11 +110,11 @@ Inside `tkfm` directory, you will see:
 > [!Caution]
 > Log file is a plain text file. This program will only append to it. No check is performed so be careful not to overwrite important file with it.
 
-> [!NOTE] Using symlink
+> [!NOTE]
 > Symlink your output directory can keep update easy.
 > On linux: `cd <dest_dir>` then `ln -s <path-of-tkfm-obsidian/tkfm>`
 
-> [!NOTE] File explorer order
+> [!NOTE]
 > Inside file explorere in obsidian, I recommand you change the sort order to `sort by creation time (old to new)`, since the characters is named by their names. This script creates each character's note in the order of their release date/ID.
 
 ## Ownership data
