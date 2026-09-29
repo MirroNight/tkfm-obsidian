@@ -1,7 +1,7 @@
 
 ## Query with BASE
 
-**BASE** is a built-in tool to query notes inside an obsidian vault, and reperesents the result in a table. It also allowed you to modify **note properties** from the table. You can move the base to directory that is relavent to its filter, or insert it directly into other notes.
+**BASE** is a built-in tool to query notes inside an obsidian vault, and represents the result in a table. It also allowed you to modify **note properties** from the table. You can move the base to directory that is relevant to its filter, or insert it directly into other notes.
 
 ### Enabling BASE
 
@@ -11,11 +11,11 @@ To enable **BASE** functionality, you'll need to enable it with the following st
 2. Go to `core plugins`
 3. Enable `database`
 
-After which, you can click on the [[Character search.base]], which is the example included to demonstrate how to filter, sort, choose diaplayed properties, etc. Play around the example included to see who it works and can do.
+After which, you can click on the [[Character search.base]], which is the example included to demonstrate how to filter, sort, choose displayed properties, etc. Play around the example included to see who it works and can do.
 
 ### Views
 
-Views are essentially the table you see when you open the **BASE**, it funtions likes tables in excel.  
+Views are essentially the table you see when you open the **BASE**, it functions likes tables in excel.  
 
 - On the top left corner of the **BASE**, you will see the "query" button, which is the name of current view.
 - Clicking on it will show you all the views you have in this **BASE**. You can add new view by clicking the `add new view`, or modify current view information by clicking `>`. You can then click on `⋮` to copy select view (very handy).
@@ -34,8 +34,8 @@ On the top right of the **BASE**, you will see **properties**. It allows you to:
 
 On the top right of the **BASE** page, you will see **filter**. Inside it, there's two section, **global view** and **this view**. (see [[#Views]])
 
-- **Global view** contains filter applies accros all views.
-- **This view** contians filters applies only to current view.
+- **Global view** contains filter applies across all views.
+- **This view** contains filters applies only to current view.
 
 For our purpose, the **global view** will set to `files in folder character`. In **this view** you can set up filtering conditions for **this view**. The filtering follows simple logics and grouping, which should be fairly easy to get your hands on.  
 
@@ -60,7 +60,7 @@ To insert a **BASE** into your note, put the following inside:
 ![[base_name]]
 ```
 
-For example, to inseart `Character search`, you need:
+For example, to insert `Character search`, you need:
 
 ```md
 ![[Character search.base]]
@@ -106,19 +106,19 @@ You might want to enter and save information about characters you owned to help 
 
 It would be a painful work if you need to go through each and every notes to modify the property value. Fortunately, obsidian offers a convenient way of modifying properties across different notes inside a **BASE**:
 
-- You can modify `owned` (boolean) value in a **BASE** by clicking the checkbox, or pressing `enter` while selecting the cell.
+- You can modify `owned` (Boolean) value in a **BASE** by clicking the checkbox, or pressing `enter` while selecting the cell.
 - You can modify `skill_level` (integer) value in a **BASE** by selecting the cell (highlighted in purple), typing the number in or `up/down arrow` key to increment/decrement value.
 - After editing, you can use `enter` to jump to cell on the right (in editing mode), or `esc` followed by `arrow` to move to cells you like, and use `enter` to go into editing mode.
-- Give obsidian some time to update corresponding note's property, do not close obsidian immdediately after editing from **BASE**.
+- Give obsidian some time to update corresponding note's property, do not close obsidian immediately after editing from **BASE**.
 
 > [!NOTE] 
 > While the `enter` and `up/down arrow` editing technique also works inside individual note's property section, it is not particualry useful for our use case.
 
 You can also manually modify the `.json` file in `archive` once you run the script for the second (or more) times. But the it uses internal markers `meta` to note characters instead of `name` or `id`. You'll have to modify this script if you want to have it use `name` or `id` instead.
 
-### Inconsistant ownership
+### Inconsistent ownership
 
-A check is built into the processing of ownership information. And the following cases are consider **inconsistan ownership** and shows as an `WARNING` inside log.
+A check is built into the processing of ownership information. And the following cases are consider **inconsistent ownership** and shows as an `WARNING` inside log.
 
 - Property `owned` set to `true` and `skill_level` set to `0`
 - Property `owned` set to `false` and `skill_level` set to `non-0`
@@ -130,13 +130,13 @@ The reasoning being:
 - `true` implies you own the character (which have skill level of at least `1`)
 - `false` implies you don't own the character (which skill level should be `0`)
 
-Thus, the `true` and `0`, as well as `false` and `non-0` presents a logical conflict. So is deemed as inconsistant ownership.
+Thus, the `true` and `0`, as well as `false` and `non-0` presents a logical conflict. So is deemed as inconsistent ownership.
 
 ## Updating data
 
 ### Update character data
 
-To update character data, simply go into `tkfm-obsidian` project dirctory, run the following command, and you're done.
+To update character data, simply go into `tkfm-obsidian` project directory, run the following command, and you're done.
 
 ```sh
 # shell
@@ -147,7 +147,7 @@ uv run main.py -o <OUTDIR>
 
 `OUTDIR` is the path to your vault.
 
-The ownership information is automatically gathered and transfered into new notes. It will also create a new `.json` inside `archive` and dump your ownership information in it as a backup.
+The ownership information is automatically gathered and transferred into new notes. It will also create a new `.json` inside `archive` and dump your ownership information in it as a backup.
 
 ### Load ownership data from archive
 
