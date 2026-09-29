@@ -121,6 +121,7 @@ tag_map_general: dict[str, Tag] = {
     "目標麻痺": Tag.paralysis,
     # rm
     "解除防禦狀態": Tag.rm_def,
+    "防禦狀態解除": Tag.rm_def,
     "解除嘲諷": Tag.rm_taunt,
     "解除護盾": Tag.rm_shield,
     "解除睡眠": Tag.rm_sleep,

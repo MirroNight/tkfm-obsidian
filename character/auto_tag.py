@@ -88,7 +88,7 @@ regex_general_tags = [
     compile(r"(目標)(?:造成)?(睡眠|沉默|麻痺)"),
     ### remove buffs/debuffs
     # rm_def | rm_taunt | rm_shield
-    compile(r"(解除防禦狀態)"),
+    compile(r"(解除防禦狀態|防禦狀態解除"),
     compile(r"(解除)[^我自站]*(嘲諷)"),
     compile(r"(解除)[^我自站]*(護盾)"),
     # rm_sleep | rm_silence | rm_paralysis
